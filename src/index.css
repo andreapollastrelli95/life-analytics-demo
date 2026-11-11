@@ -1,0 +1,10 @@
+@import "tailwindcss";
+body { @apply bg-slate-50 text-slate-800; }
+.btn { @apply rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-50; }
+.btn-ghost { @apply rounded-md border border-slate-300 px-3 py-1.5 text-sm hover:bg-slate-100; }
+.inp { @apply rounded-md border border-slate-300 bg-white px-2 py-1.5 text-sm; }
+@media (max-width: 767px) {
+  .btn, .btn-ghost, .inp { min-height: 44px; font-size: 16px; }
+  nav a { padding: 0.65rem 0.75rem; }
+}
+.card { @apply rounded-xl border border-slate-200 bg-white p-4 shadow-sm; }

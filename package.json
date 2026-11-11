@@ -1,0 +1,50 @@
+{
+  "name": "life-analytics",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Life Analytics - analisi dei dati personali",
+  "author": "Andrea Pollastrelli",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "serve": "node server/server.cjs",
+    "build": "tsc --noEmit && vite build",
+    "dist": "vite build && electron-builder --win --dir"
+  },
+  "build": {
+    "appId": "local.lifeanalytics",
+    "productName": "Life Analytics",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "electron/**",
+      "server/**",
+      "package.json"
+    ],
+    "win": {
+      "target": "dir",
+      "signAndEditExecutable": false
+    }
+  },
+  "dependencies": {
+    "dexie": "^4.4.7",
+    "dexie-react-hooks": "^4.4.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.5",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "electron": "^45.2.3",
+    "electron-builder": "^26.18.0",
+    "tailwindcss": "^4.3.4",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6"
+  }
+}
